@@ -1,0 +1,40 @@
+.header {
+    margin-bottom: 80px;
+}
+
+.header-logo {
+    background-color: $color-dark;
+    background-image: url(../img/header-bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__title {
+        display: block;
+        color: $color-accent;
+        font-size: 3.5rem;
+        font-family: $font-header;
+        letter-spacing: 0.33em;
+        @extend %text-shadow;
+        @include xs-min {
+            letter-spacing: 0.33em;
+            font-size: 3.5rem;
+            margin-right: -$gap;
+        }
+        @include xs {
+            letter-spacing: 0.2em;
+            font-size: 2.5rem;
+            margin-right: -($gap / 3);
+        }
+    }
+
+    &__description {
+        display: block;
+        color: $color-light;
+        letter-spacing: 0.2em;
+        font-size: 1.15rem;
+        @extend %text-shadow;
+    }
+}
