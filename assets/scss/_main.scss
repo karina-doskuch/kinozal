@@ -1,3 +1,98 @@
 .main {
     @extend %margin-bottom-lg;
+
+    .site-search {
+        margin-bottom: 45px;
+    }
+
+    .user-login {
+        margin-bottom: 60px;
+    }
+}
+
+.new-films,
+.top-week {
+    &-row {
+        margin-right: -7.5px;
+        margin-bottom: -15px;
+        margin-left: -7.5px;
+    }
+
+    &-item {
+        margin-bottom: 15px;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+
+        &__thumbnail {
+            transition: background-color 0.25s;
+            margin-bottom: 0;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 0;
+
+            @include text-shortener;
+        }
+
+        &__caption {
+            text-align: center;
+        }
+
+        &:hover {
+            .thumbnail {
+                background-color: $color-accent;
+                border-color: $color-accent;
+            }
+
+            h3 {
+                color: $color-light;
+            }
+        }
+    }
+}
+
+.film-news {
+    &-item {
+        .thumbnail {
+            margin-bottom: 0;
+            transition: backgroungd-color 0.25s;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__text {
+            text-align: justify;
+        }
+
+        &__button {
+            margin-bottom: 30px;
+            float: right;
+        }
+
+        &:hover {
+            .thumbnail {
+                background-color: lighten($color-accent, 15%);
+            }
+
+            h3 > a {
+                color: $color-accent;
+            }
+
+            .btn-warning {
+                background-color: $color-accent;
+            }
+        }
+
+        h3 > a {
+            transition: color 0.25s;
+        }
+    }
 }
