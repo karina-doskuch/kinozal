@@ -11,7 +11,7 @@
             }
         }
 
-        > li > a {
+        >li>a {
             transition: background-color 0.5s;
 
             @include sm-min {
@@ -33,6 +33,7 @@
 .navbar {
     margin-bottom: 0;
 }
+
 .navbar-header {
     text-align: center;
 }
@@ -65,5 +66,27 @@
 
     @include sm {
         margin-top: 0;
+    }
+}
+
+.panel {
+    margin-bottom: $gap * 2;
+
+    &-info {
+        border: none;
+        background-color: darken($color-light, 8%);
+
+        >.panel-heading {
+            color: $color-light;
+            background-color: $color-accent;
+            border: none;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    &-body {
+        border: 1px solid $color-gray;
+        border-radius: 0 0 4px 4px;
     }
 }
