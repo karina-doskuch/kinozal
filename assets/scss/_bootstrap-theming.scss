@@ -1,8 +1,10 @@
 .navbar-inverse {
+    margin-bottom: 0;
+    border-color: transparent;
     background-color: darken($color-dark, 4%);
 
     .navbar-nav {
-        >.active>a {
+        > .active > a {
             background-color: $color-primary-dark;
 
             &:focus,
@@ -11,7 +13,8 @@
             }
         }
 
-        >li>a {
+        > li {
+        > a {
             transition: background-color 0.5s;
 
             @include sm-min {
@@ -25,13 +28,10 @@
             &:focus,
             &:hover {
                 background-color: $color-primary;
+              } 
             }
         }
     }
-}
-
-.navbar {
-    margin-bottom: 0;
 }
 
 .navbar-header {
@@ -53,7 +53,6 @@
     @include sm {
         margin-bottom: 0;
     }
-
 }
 
 .navbar-right {
@@ -61,7 +60,6 @@
         li {
             margin: 5px 0 5px 5px;
         }
-
     }
 
     @include sm {
@@ -70,13 +68,12 @@
 }
 
 .panel {
-    margin-bottom: $gap * 2;
+    border: none;
+    background-color: darken($color-light, 8%);
+    margin-bottom: 30px;
 
     &-info {
-        border: none;
-        background-color: darken($color-light, 8%);
-
-        >.panel-heading {
+        .panel-heading {
             color: $color-light;
             background-color: $color-accent;
             border: none;
@@ -92,10 +89,11 @@
 }
 
 .input {
-  &-lg,
-  &-group-lg > .form-control {
-      font-size: 0.875rem;
-  }
+
+    &-lg,
+    &-group-lg > .form-control {
+        font-size: 0.875rem;
+    }
 }
 
 .well {
@@ -104,8 +102,8 @@
 }
 
 .embed-responsive {
-    border: 1px solid $color-gray;
     border-bottom: none;
+    border: 1px solid $color-gray;
     border-radius: 4px 4px 0 0;
 }
 

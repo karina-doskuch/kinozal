@@ -61,7 +61,7 @@
     &-item {
         .thumbnail {
             margin-bottom: 0;
-            transition: backgroungd-color 0.25s;
+            transition: background-color 0.25s;
         }
 
         &__image {
@@ -69,12 +69,13 @@
         }
 
         &__text {
-            text-align: justify;
+            text-align: center;
         }
 
         &__button {
             margin-bottom: 30px;
             float: right;
+            transition: background-color 0.25s;
         }
 
         &:hover {

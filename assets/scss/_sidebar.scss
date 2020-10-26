@@ -14,3 +14,130 @@
         width: 100%;
     }
 }
+
+.user-login {
+    position: relative;
+
+    &__tabs {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        border: none;
+
+        a {
+            color: $color-gray;
+            border: none !important;
+            background-color: transparent !important;
+            padding: 14px 5px 11px !important;
+        }
+
+        .active a {
+            color: $color-light !important;
+        }
+    }
+}
+
+.site-news {
+    &-item {
+        position: relative;
+        clear: both;
+
+        &:not(:last-child) {
+            min-height: 85px;
+            margin-bottom: 15px;
+
+            &::after {
+                bottom: -5px;
+                position: absolute;
+                background-color: $color-gray;
+                right: 0;
+                width: calc(100% - 85px);
+                height: 1px;
+
+                content: "";
+            }
+        }
+
+        &:hover {
+            a {
+                color: $color-accent;
+            }
+
+            .site-news-item__image {
+                border-color: $color-accent;
+                background-color: $color-accent;
+            }
+        }
+
+        &__image {
+            width: 75px;
+            margin: 0 10px 10px 0;
+            float: left;
+        }
+
+        &__date {
+            color: darken($color-gray, 30%);
+            font-size: 0.8rem;
+            text-align: right;
+        }
+
+        &__title {
+            margin-bottom: 10px;
+
+            a {
+                @include block-shortener(1rem, 1.5, 50px, 2);
+                transition: color 0.25s;
+
+            }
+        }
+    }
+}
+
+.top-films {
+    &__body {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &__list {
+        margin-bottom: 0;
+    }
+
+    &-item {
+        padding-right: 54px;
+        margin-right: -1px;
+        margin-left: -1px;
+        transition: none;
+        background-color: transparent;
+        color: $color-primry !important;
+
+        &:first-child {
+            border-radius: 0;
+            border-bottom: none;
+        }
+
+        &:last-child {
+            border-radius: 0;
+            border-bottom: none;
+        }
+
+        &:focus,
+        &:hover {
+            border-color: $color-accent;
+            background-color: $color-accent !important;
+            color: $color-light !important;
+
+            .badge {
+                background-color: $color-dark;
+            }
+        }
+
+    }
+
+    &__badge {
+        top: 50%;
+        right: 15px;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+}
