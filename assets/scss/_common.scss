@@ -67,10 +67,10 @@ h2 {
     &::after {
         position: absolute;
         width: 100%;
-        // margin: 0.85em 0 0 15px;
+        margin: 0.85em 0 0 15px;
 
         content: "";
-        border-bottom: 3px solid rgba(lighten($color-accent, 15%), 0.7) !important; 
+        border-bottom: 3px solid rgba(lighten($color-accent, 15%), 0.7); 
     }
 }
 

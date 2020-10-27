@@ -11,7 +11,7 @@
     border-radius: 4px;
 
     img {
-        width: 100%;
+      width: 100%;
     }
 }
 
@@ -87,7 +87,6 @@
             a {
                 @include block-shortener(1rem, 1.5, 50px, 2);
                 transition: color 0.25s;
-
             }
         }
     }
@@ -113,7 +112,7 @@
 
         &:first-child {
             border-radius: 0;
-            border-bottom: none;
+            border-top: none;
         }
 
         &:last-child {
