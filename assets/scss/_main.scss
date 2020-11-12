@@ -85,15 +85,12 @@
 
             h3 > a {
                 color: $color-accent;
+                transition: color 0.25s;
             }
 
             .btn-warning {
                 background-color: $color-accent;
             }
-        }
-
-        h3 > a {
-            transition: color 0.25s;
         }
     }
 }

@@ -49,12 +49,12 @@
             &::after {
                 bottom: -5px;
                 position: absolute;
-                background-color: $color-gray;
                 right: 0;
                 width: calc(100% - 85px);
                 height: 1px;
 
                 content: "";
+                background-color: $color-gray;
             }
         }
 
@@ -85,8 +85,9 @@
             margin-bottom: 10px;
 
             a {
-                @include block-shortener(1rem, 1.5, 50px, 2);
                 transition: color 0.25s;
+                @include block-shortener(1rem, 1.5, 50px, 2);
+               
             }
         }
     }
@@ -103,13 +104,13 @@
     }
 
     &-item {
+        
         padding-right: 54px;
         margin-right: -1px;
         margin-left: -1px;
         transition: none;
         background-color: transparent;
         color: $color-primary !important;
-
         &:first-child {
             border-radius: 0;
             border-top: none;
@@ -120,8 +121,8 @@
             border-bottom: none;
         }
 
-        &:focus,
-        &:hover {
+         &:focus,
+         &:hover {
             border-color: $color-accent;
             background-color: $color-accent !important;
             color: $color-light !important;
